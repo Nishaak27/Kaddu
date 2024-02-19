@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('space-background.jpg'); /* Space background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.text {
+  font-family: 'Arial', sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  animation: shine 2s infinite alternate;
+  color: #ffcc00; /* Shiny yellow color */
+}
+
+.text::after {
+  content: 'Kaddu';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #00ffcc; /* Cyan color */
+  z-index: -1;
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00, 0 0 60px #ffcc00, 0 0 70px #ffcc00, 0 0 80px #ffcc00;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00, 0 0 60px #ffcc00, 0 0 70px #ffcc00;
+  }
+}
